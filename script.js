@@ -6,7 +6,7 @@ $(document).ready(function() {
     
   //  $("#answer").hide();
     
-    magic8Ball.askQuestion = function(magicAsk){
+    magic8Ball.askQuestion = function(magicAsk) {
             
         var randomNumber = Math.random();
         var randomNumberForListOfAnswers = randomNumber * this.listOfAnswers.length;
@@ -22,7 +22,7 @@ $(document).ready(function() {
     //wait half a second before showing prompt
         setTimeout (
             function () {
-                var magicAsk = prompt("Ask a yes or no question");
+                var promptQuestion = prompt("Ask a yes or no question");
                 $("#8ball").fadeIn(4000); 
             }, 500);    
        
