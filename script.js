@@ -1,12 +1,12 @@
-$(document).ready(function() {
+var $ = jQuery;
+$(html).ready(function() {
     
     var magic8Ball = {};
     
     magic8Ball.listOfAnswers = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.", "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Dont count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
     
-  //  $("#answer").hide();
     
-    magic8Ball.askQuestion = function(magicAsk) {
+    magic8Ball.askQuestion = function(askQuestion) {
             
         var randomNumber = Math.random();
         var randomNumberForListOfAnswers = randomNumber * this.listOfAnswers.length;
@@ -22,7 +22,7 @@ $(document).ready(function() {
     //wait half a second before showing prompt
         setTimeout (
             function () {
-                var promptQuestion = prompt("Ask a yes or no question");
+                var askQuestion = prompt("Ask a yes or no question");
                 $("#8ball").fadeIn(4000); 
             }, 500);    
        
